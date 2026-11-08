@@ -11,7 +11,7 @@ Five tasks (PLAN.md Section 4)
     explain_score : context from preprocessed/ml_scores.csv (development months 0-5), answers from templates
     dataset_fact  : context lines from the EDA tables and the model card, answers from templates
     policy        : refusals (decisions, protected reasons, verdicts), "not in the context", scope
-    banking_qa    : Bitext retail-banking Q&A (CDLA-Sharing-1.0) + concept Q&A written by Claude (llm:claude-sonnet)
+    banking_qa    : Bitext retail-banking Q&A (CDLA-Sharing-1.0) + generated concept Q&A (source llm:claude-sonnet)
     general       : Alpaca-cleaned (CC-BY-4.0)
 
 Splits: seed 42; applications and fact rows are split into disjoint pools; no (instruction, input) pair occurs

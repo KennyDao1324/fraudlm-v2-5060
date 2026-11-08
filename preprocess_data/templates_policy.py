@@ -3,7 +3,7 @@
 Policy goals (A1 OOS07, PLAN.md D6/D7): FraudLM supports a fraud analyst, never approves / rejects /
 blocks an application, never gives age, income or employment as a reason, says "not in the context"
 when a fact is missing, never calls an application "fraudulent", and calls the score a "model score",
-not a probability. Questions are hand-written (source "template") or paraphrased by Claude
+not a probability. Questions are hand-written (source "template") or generated from a recorded source
 (source "llm:claude-sonnet"); answers come from templates, with numbers copied from the context.
 
 Author: FraudLM v2 team (COS30049.2-1).

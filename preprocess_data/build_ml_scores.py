@@ -206,7 +206,7 @@ def main() -> None:
     meta = {
         "source": source,
         "source_note": ("scores come from artifacts/production_model.joblib of the team repo (Base champion, logistic "
-                        "regression); the team has not yet confirmed this is the frozen A2-14 model (CLAUDE.md open decision 2)"),
+                        "regression); the team has not yet confirmed this is the frozen A2-14 model (historical freeze confirmation pending)"),
         "team_repo": "https://github.com/KennyDao1324/ai4cyber-fraud",
         "team_repo_commit": commit,
         "artifact_sha256": C.sha256_file(C.ARTIFACT),

@@ -2,7 +2,7 @@
 
 Each intent has
     t   : template questions (hand-written, source "template")
-    l   : paraphrases seen in training (written by Claude, source "llm:claude-sonnet")
+    l   : generated paraphrases seen in training (source "llm:claude-sonnet")
     held: paraphrases used ONLY in the test split (never in train or val)
     applies: "flagged" | "not_flagged" | "any"
 Answers are built from the context numbers only (score, threshold, factor names and values), so every

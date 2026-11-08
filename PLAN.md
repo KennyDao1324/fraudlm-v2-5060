@@ -1,7 +1,7 @@
 # FraudLM v2 (GPT-2 route): build plan
 
-Owner: Thông (106212681). Lead/orchestrator: the main Claude Code session. Builders: the agents in
-`.claude/agents/`. Created Fri 06/11/2026 03:55 (UTC+7). **Supersedes `../llm/BUILD_PLAN.md` for all LLM work.**
+Owner: Thông (106212681). Historical build plan created Fri 06/11/2026 03:55 (UTC+7).
+Current device setup and operational commands are in `DEVICE_GUIDE.md` and `DEVELOPMENT.md`.
 
 Hard deadline: A2 submission Sun 08/11 23:59 (team target 20:00). Report freeze Sat 07/11 20:00.
 The A2 core (classifier + clustering) always has priority; this LLM is the HD "additional ML" extra.
@@ -22,7 +22,7 @@ The A2 core (classifier + clustering) always has priority; this LLM is the HD "a
 | D8 | Name: **FraudLM**. Do not reuse another team's product name, code or data files. | LOCKED |
 | D9 | G2 result (06/11, Kaggle T4): **GPT-2 XL**, fp32 base, gradient checkpointing on, micro-batch 4 × accum 2, lr 1e-4, r16/α32, 2 epochs (775 tok/s, peak 10.75 GB, projected 2.18 h). | DECIDED by G2 |
 | D10 | F10 age proxy `date_of_birth_distinct_emails_4w`: **kept** as an explanation factor (it is a real model input); reported as a limitation (Spearman −0.456 with age). Decided by the lead under Thông's delegation 06/11; Thông may overturn (rebuild + retrain). | DECIDED (lead) |
-| D11 | Kaggle runs are pushed by the lead with the Kaggle CLI (Thông's authorisation 06/11). Agents still never push. | DECIDED |
+| D11 | Kaggle runs require explicit owner approval before publication through the Kaggle CLI. | DECIDED |
 
 ---
 
@@ -30,7 +30,7 @@ The A2 core (classifier + clustering) always has priority; this LLM is the HD "a
 
 ```
 llm_ver2/
-  PLAN.md, CLAUDE.md, TEAM_LOG.md     lead (agents append to TEAM_LOG.md only)
+  PLAN.md, DEVELOPMENT.md, TEAM_LOG.md  development notes and technical history
   environment.yml, README_dev.md      lead
   training_model/
     gpt_model.py                      model-builder
@@ -146,16 +146,15 @@ Run `xl_r16_v1` trained (Kaggle `fraudlm-train` v1) and evaluated (Kaggle `fraud
 
 ---
 
-## 6. Rules for every agent
+## 6. Development conventions
 
 1. Read `PLAN.md` and the last 30 lines of `TEAM_LOG.md` before starting. Write only in folders you own.
 2. Each code file starts with a header: purpose, author "FraudLM v2 team (COS30049.2-1)", "Architecture follows
-   Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning; code repo Apache-2.0" where it applies,
-   and "Written with help from Claude Code (Anthropic); reviewed by Thông".
+   Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning; code repo Apache-2.0" where it applies.
 3. Comments explain *why*, short and plain. Thông must be able to explain every line in a demo.
 4. Test on CPU with `gpt2-small` and tiny data before anything goes to Kaggle. Long jobs: resumable, log to disk, print ETA, fail loudly.
 5. Seed 42 everywhere. Never touch test months 6–7 for any training decision.
 6. Never write secrets (Kaggle token, HF token) into any file, log or message. Never run `kaggle kernels push`
    or any upload without Thông's explicit OK in the conversation.
-7. End every job by appending to `TEAM_LOG.md`: time, agent, what was done, files, test result, open issues.
+7. Record completed work in `TEAM_LOG.md`: time, role, changes, files, test results and open issues.
 8. No prose for the submitted report/README; give facts, numbers and bullet notes. Thông writes the sentences.

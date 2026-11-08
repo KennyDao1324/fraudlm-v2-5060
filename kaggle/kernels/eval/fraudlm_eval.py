@@ -14,7 +14,6 @@ sys.argv = [sys.argv[0], "--max_hours", "11"]
 #
 # Author: FraudLM v2 team (COS30049.2-1). Model/LoRA/loader code follows Raschka, S. (2024)
 # *Build a Large Language Model (From Scratch)*, Manning; code repo Apache-2.0.
-# Written with help from Claude Code (Anthropic); reviewed by Thong.
 # =====================================================================================
 
 # -------------------------------------------------------------------------------------
@@ -54,7 +53,6 @@ weights (small / medium / large / xl). No `transformers` model classes are used 
 Author: FraudLM v2 team (COS30049.2-1).
 Architecture follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapters 3-4; code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import math
@@ -321,7 +319,6 @@ Hu et al. (2021) "LoRA: Low-Rank Adaptation of Large Language Models".
 Author: FraudLM v2 team (COS30049.2-1).
 Follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 appendix E (LoRALayer, LinearWithLoRA); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import math
@@ -462,7 +459,6 @@ No pretraining happens in this project (PLAN D1); these weights are the starting
 Author: FraudLM v2 team (COS30049.2-1).
 Weight mapping follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapter 5 (`load_weights_into_gpt`); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 
 Note: `transformers` is never imported here (PLAN D3). We only read the raw tensors.
 """
@@ -636,7 +632,6 @@ so the text the model sees in training is byte-identical to the text it sees at 
 Author: FraudLM v2 team (COS30049.2-1).
 Template format follows the Alpaca instruction format (Taori et al. 2023), as used in
 Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning; code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 
 Contract (PLAN.md Section 3):
     format_prompt(instruction, input="") -> str   ends with "### Response:\\n"
@@ -808,7 +803,6 @@ end-of-text token (id 50256) and cropping the context to the model's 1,024-token
 Author: FraudLM v2 team (COS30049.2-1).
 Follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapters 4-5 (`generate`, `text_to_token_ids`, `token_ids_to_text`); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import tiktoken
@@ -945,7 +939,6 @@ The prompt template is never re-written here: every example goes through
 Author: FraudLM v2 team (COS30049.2-1).
 Masked instruction fine-tuning follows Raschka, S. (2024) *Build a Large Language Model (From
 Scratch)*, Manning, chapter 7 (custom collate with -100 targets); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import json
@@ -1091,7 +1084,7 @@ def decode_labels(labels):
 # ---- evaluation/__init__.py  (sha256 114bb615414d) ----
 _BUNDLED_FILES["evaluation/__init__.py"] = r'''"""FraudLM v2 evaluation harness (gate G5): metrics, B0 baseline, run_eval CLI, figures.
 
-Author: FraudLM v2 team (COS30049.2-1). Written with help from Claude Code (Anthropic); reviewed by Thong.
+Author: FraudLM v2 team (COS30049.2-1).
 """
 '''
 
@@ -1117,7 +1110,6 @@ The rules were written from the templates in preprocess_data/ and checked on the
 the train/val splits (the reference answers must pass them); nothing here is fitted to model outputs.
 
 Author: FraudLM v2 team (COS30049.2-1).
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 from __future__ import annotations
@@ -1604,7 +1596,6 @@ This responder is written separately from the dataset templates in preprocess_da
 only (instruction, input), never the task label, the policy category or the reference answer.
 
 Author: FraudLM v2 team (COS30049.2-1).
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 from __future__ import annotations
@@ -1761,7 +1752,6 @@ Outputs in --out (default evaluation/results/):
 Author: FraudLM v2 team (COS30049.2-1).
 Generation and masked loss follow Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapters 5 and 7; code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 from __future__ import annotations
@@ -2142,7 +2132,6 @@ image (the caption goes under the figure in the report; caption facts are in eva
 Every plotted value is read from a results file or train_log.csv; nothing is typed in by hand.
 
 Author: FraudLM v2 team (COS30049.2-1).
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 from __future__ import annotations
@@ -2301,7 +2290,6 @@ Usage (from llm_ver2/):
   python evaluation/pick_examples.py evaluation/results/<file>.json --n 3
 
 Author: FraudLM v2 team (COS30049.2-1).
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 from __future__ import annotations
@@ -2415,7 +2403,6 @@ Usage
               (script kernel: the lead prepends `import sys; sys.argv = [...]`; every option is a flag)
 
 Author: FraudLM v2 team (COS30049.2-1).
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import argparse

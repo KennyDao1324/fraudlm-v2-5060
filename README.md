@@ -36,6 +36,7 @@ python training_model/train_sft.py --size gpt2-small --max_train_rows 32 --max_s
 ## Start here
 
 - [This branch's device setup](DEVICE_GUIDE.md)
+- [Development conventions](DEVELOPMENT.md)
 - [RTX 5060 setup and commands](README_RTX5060.md)
 - [Current grounding and evaluation status](FINAL_GROUNDING.md)
 - [Data and model distribution status](DISTRIBUTION.md)

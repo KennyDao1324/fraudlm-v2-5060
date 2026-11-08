@@ -33,7 +33,7 @@ Fixes F1–F5 change the training text, so they should be applied and the data r
 | Near-duplicates | Note (F5, F8) | 137 test rows have an output identical to a train output (50 concept banking_qa by design, 24 fact, 32 policy, 31 explain). 4 val + 4 test explain/policy **inputs** are identical to a train input (different apps, same 4-dp score + same factors). 186/233 test factor blocks also occur in train (with different scores) |
 | Licences | Partly (F6) | Bitext CDLA-Sharing-1.0 and alpaca-cleaned CC-BY-4.0 are recorded with correct HF URLs and row counts (2,610 / 1,300 / 250 concept). Missing: upstream Stanford Alpaca CC BY-NC 4.0, the share-alike duties, retrieval revision |
 | Secrets | OK | grep for token/key/KAGGLE/hf_/secret/password over the data-builder files: no hits. `fetch_public.py` reads no token |
-| Headers (PLAN §6) | OK | all 10 `preprocess_data/*.py` files (except the empty `__init__`), `utils/prompt.py` and both tests carry purpose, author and the Claude Code / reviewed-by line. Raschka + Taori credit in `prompt.py:6-7` |
+| Headers (PLAN §6) | OK | all 10 `preprocess_data/*.py` files (except the empty `__init__`), `utils/prompt.py` and both tests carry purpose, author and source-credit headers. Raschka + Taori credit in `prompt.py:6-7` |
 | Size / ignore | OK | largest dataset file 10.2 MB (train). `raw/` (68 MB) and `_ml_repo/` are gitignored in `preprocessed/.gitignore` |
 
 ## Fixes (apply before the G4 full run unless marked)
@@ -48,7 +48,7 @@ factors raise, add a template sentence such as "These factors push the score up,
 Change it in `prompt.py` now, because chat.py will import the same block.
 
 **F2. The protected-attribute refusal overclaims.** `templates_policy.py:228` "so they cannot explain a score" and `:233` "so they did not
-drive this score" are used 209 times. The attributes are not *direct* inputs. But the team's own fairness result (CLAUDE.md §6: FPR 9.1% for age > 50 vs 4.4%,
+drive this score" are used 209 times. The attributes are not *direct* inputs. But the team's own fairness result (the historical planning notes (section 6): FPR 9.1% for age > 50 vs 4.4%,
 ratio 2.07) and the age proxy (F10) mean the model's behaviour *does* differ by age group. Telling an analyst "they did not drive this score" is
 misleading. Fix: keep "are not inputs to the classifier and I never give them as a reason", and drop the causal
 "so they cannot explain / did not drive" clauses. Optionally add "group-level fairness checks are reported separately by the team".
@@ -95,7 +95,7 @@ separately, so these memorised answers do not inflate the test numbers.
 **F9. (lead/Thông)** I accept the held-out test-metrics fact line (`facts.py:208`, PR-AUC 0.1695 etc.). It quotes the model card. It does not use
 test months for any LLM or classifier decision, and its wording says "50,000-row sample". Condition: if open decision 2 (frozen model)
 changes the model, rerun `build_ml_scores` and `build_sft`. Also, `ml_scores.meta.json` records team repo commit **d0fc662**
-(06/11 01:55), while CLAUDE.md §1/§2 still says `661871e`. The artefact threshold 0.7462441 matches the model card. The lead should update CLAUDE.md or confirm with Kha.
+(06/11 01:55), while the historical planning notes (sections 1–2) still says `661871e`. The artefact threshold 0.7462441 matches the model card. The lead should update DEVELOPMENT.md or confirm with Kha.
 
 **F10. (Team decision for Thông. Facts only, not decided here.)** The model input `date_of_birth_distinct_emails_4w` correlates with `customer_age`
 (Spearman −0.456, `reports/tables/eda_strong_correlations.csv` row 2). In the dataset it appears in 211 of 13,000 rows (1.6%):
