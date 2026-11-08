@@ -62,11 +62,11 @@ def test_ids_unique(data, demo):
 def test_sources_are_recorded(data):
     for r in all_rows(data):
         s = r["source"]
-        assert s in ("template", "llm:claude-sonnet") or "(" in s and ")" in s, (r["id"], s)
+        assert s in ("template", "synthetic:generated-qa-v1") or "(" in s and ")" in s, (r["id"], s)
         if r["task"] == "general":
             assert "alpaca-cleaned" in s and "CC-BY-4.0" in s
         if r["task"] in ("explain_score", "dataset_fact", "policy"):
-            assert s in ("template", "llm:claude-sonnet"), r["id"]
+            assert s in ("template", "synthetic:generated-qa-v1"), r["id"]
 
 
 # ------------------------------------------------------------------ splits

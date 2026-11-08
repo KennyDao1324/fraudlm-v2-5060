@@ -2,7 +2,7 @@
 
 Each intent has
     t   : template questions (hand-written, source "template")
-    l   : generated paraphrases seen in training (source "llm:claude-sonnet")
+    l   : generated paraphrases seen in training (source "synthetic:generated-qa-v1")
     held: paraphrases used ONLY in the test split (never in train or val)
     applies: "flagged" | "not_flagged" | "any"
 Answers are built from the context numbers only (score, threshold, factor names and values), so every
@@ -203,7 +203,7 @@ def _pick_q(intent: dict, rng: random.Random, kinds: tuple[str, ...]) -> tuple[s
     """Return (question text, source) drawn from the requested question pools."""
     pools = []
     for k in kinds:
-        src = "template" if k == "t" else "llm:claude-sonnet"
+        src = "template" if k == "t" else "synthetic:generated-qa-v1"
         pools += [(q, src) for q in intent[k]]
     return rng.choice(pools)
 

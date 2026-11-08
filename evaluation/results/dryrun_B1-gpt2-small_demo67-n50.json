@@ -509,7 +509,7 @@
   {
    "id": "demo67-00004-app861197",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Does application velocity over 4 weeks push the score up or down?",
@@ -544,7 +544,7 @@
   {
    "id": "demo67-00013-app880870",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Describe this result without jargon.",
@@ -584,7 +584,7 @@
   {
    "id": "demo67-00014-app941158",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "How should I follow up on this result?",
@@ -623,7 +623,7 @@
   {
    "id": "demo67-00016-app877974",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "How do I interpret this score?",
@@ -662,7 +662,7 @@
   {
    "id": "demo67-00017-app966583",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Is this application above or below the line?",
@@ -703,7 +703,7 @@
   {
    "id": "demo67-00023-app945849",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "How should I follow up on this result?",
@@ -742,7 +742,7 @@
   {
    "id": "demo67-00024-app818257",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Why is this application not in the review queue?",
@@ -819,7 +819,7 @@
   {
    "id": "demo67-00041-app879353",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What should I take from this score?",
@@ -858,7 +858,7 @@
   {
    "id": "demo67-00045-app935194",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What is the effect of application velocity over 4 weeks on this result?",
@@ -893,7 +893,7 @@
   {
    "id": "demo67-00048-app795470",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Do I need to do anything with this application?",
@@ -932,7 +932,7 @@
   {
    "id": "demo67-00050-app874298",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Can you explain the score for this application?",
@@ -971,7 +971,7 @@
   {
    "id": "demo67-00052-app844880",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": true,
    "instruction": "Which factor moved the score the most?",
@@ -1006,7 +1006,7 @@
   {
    "id": "demo67-00053-app869406",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Show me all the main factors and which way they push the score.",
@@ -1043,7 +1043,7 @@
   {
    "id": "demo67-00058-app815757",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Tell me why this application did not reach the review threshold.",
@@ -1083,7 +1083,7 @@
   {
    "id": "demo67-00064-app854209",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Can I get a quick summary of this application?",
@@ -1123,7 +1123,7 @@
   {
    "id": "demo67-00072-app929116",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "How much should I read into name-email similarity?",
@@ -1160,7 +1160,7 @@
   {
    "id": "demo67-00080-app819749",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": true,
    "instruction": "Which factors were used to explain this score?",
@@ -1197,7 +1197,7 @@
   {
    "id": "demo67-00082-app976382",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "TL;DR of this result?",
@@ -1237,7 +1237,7 @@
   {
    "id": "demo67-00099-app938393",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Where do I go from here?",
@@ -1276,7 +1276,7 @@
   {
    "id": "demo67-00102-app944332",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": true,
    "instruction": "Is the score over the threshold?",
@@ -1315,7 +1315,7 @@
   {
    "id": "demo67-00111-app841716",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Which factor moved the score the most?",
@@ -1350,7 +1350,7 @@
   {
    "id": "demo67-00112-app913320",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Show me all the main factors and which way they push the score.",
@@ -1387,7 +1387,7 @@
   {
    "id": "demo67-00113-app904487",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Does months at previous address push the score up or down?",
@@ -1422,7 +1422,7 @@
   {
    "id": "demo67-00115-app944349",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Can you put this result in everyday language?",
@@ -1462,7 +1462,7 @@
   {
    "id": "demo67-00117-app941461",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Why is this application in my review queue?",
@@ -1502,7 +1502,7 @@
   {
    "id": "demo67-00120-app840010",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": true,
    "instruction": "What is the leading factor in this result?",
@@ -1537,7 +1537,7 @@
   {
    "id": "demo67-00126-app959625",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Why did the classifier flag this application?",
@@ -1577,7 +1577,7 @@
   {
    "id": "demo67-00136-app880978",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Help me read this result.",
@@ -1616,7 +1616,7 @@
   {
    "id": "demo67-00141-app934097",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Sum up the result in a sentence.",
@@ -1656,7 +1656,7 @@
   {
    "id": "demo67-00143-app945621",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Why does the classifier not flag this application?",
@@ -1696,7 +1696,7 @@
   {
    "id": "demo67-00149-app945465",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Explain this in simple words.",
@@ -1736,7 +1736,7 @@
   {
    "id": "demo67-00151-app982571",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Why did this application stay under the threshold?",
@@ -1776,7 +1776,7 @@
   {
    "id": "demo67-00173-app898425",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What would you suggest as a next step?",
@@ -1815,7 +1815,7 @@
   {
    "id": "demo67-00175-app826566",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What does a score like this tell me?",
@@ -1854,7 +1854,7 @@
   {
    "id": "demo67-00177-app986681",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What is the leading factor in this result?",
@@ -1889,7 +1889,7 @@
   {
    "id": "demo67-00184-app806260",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What should I take from this score?",
@@ -1928,7 +1928,7 @@
   {
    "id": "demo67-00186-app849135",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Which single factor has the largest effect on the score?",
@@ -1963,7 +1963,7 @@
   {
    "id": "demo67-00194-app989031",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Which factor moved the score the most?",
@@ -1998,7 +1998,7 @@
   {
    "id": "demo67-00195-app809426",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": true,
    "instruction": "Which factors were used to explain this score?",
@@ -2033,7 +2033,7 @@
   {
    "id": "demo67-00215-app848501",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Explain it like I have never seen a fraud score before.",
@@ -2073,7 +2073,7 @@
   {
    "id": "demo67-00217-app886083",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Walk me through why the model flagged this case.",
@@ -2113,7 +2113,7 @@
   {
    "id": "demo67-00230-app857129",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": true,
    "instruction": "What is the effect of months at previous address on this result?",
@@ -2148,7 +2148,7 @@
   {
    "id": "demo67-00236-app797503",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": true,
    "instruction": "What is the leading factor in this result?",
@@ -2183,7 +2183,7 @@
   {
    "id": "demo67-00259-app906348",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Is the score over the threshold?",
@@ -2222,7 +2222,7 @@
   {
    "id": "demo67-00275-app801926",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Which single factor has the largest effect on the score?",
@@ -2257,7 +2257,7 @@
   {
    "id": "demo67-00280-app872580",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What happens next?",
@@ -2296,7 +2296,7 @@
   {
    "id": "demo67-00283-app870177",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Check whether the score reaches the review threshold.",
@@ -2335,7 +2335,7 @@
   {
    "id": "demo67-00288-app826123",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Describe this result without jargon.",
@@ -2375,7 +2375,7 @@
   {
    "id": "demo67-00296-app902283",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Can I get a quick summary of this application?",

@@ -1,6 +1,6 @@
 # SOURCES (facts only, for the bibliography)
 
-Licences were read from the dataset cards on 2026-11-06. Each row of the JSON splits carries its own `source` field (public dataset name with licence, `template`, or `llm:claude-sonnet`), which says which licence applies to that row.
+Licences were read from the dataset cards on 2026-11-06. Each row of the JSON splits carries its own `source` field (public dataset name with licence, `template`, or `synthetic:generated-qa-v1`), which says which licence applies to that row.
 
 | Name | URL | Authors / publisher | Licence | Used for | Rows in dataset/ |
 |---|---|---|---|---|---|

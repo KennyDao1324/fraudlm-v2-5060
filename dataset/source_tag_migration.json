@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "change": "Source metadata renamed to synthetic:generated-qa-v1; all instruction/input/output/id/task values unchanged.",
+  "alias": "synthetic:generated-qa-v1",
+  "files": {
+    "fraudlm_demo_months67.json": {
+      "original_sha256": "cdb93a66a15655674d0e92826d3565f0356eaffc7f05f8cda79792dd18588d03",
+      "current_sha256": "bd6d8949ae9558d2896e8d546093914abb98d4ce7ff4b2953a16cc3965eceeea",
+      "rows": 300,
+      "training_payload_sha256": "0aa2630b55f2922b757fbda1103b5c5ccdf3140da0b0cab6f4cc4e63f41fe01d"
+    },
+    "fraudlm_sft_test.json": {
+      "original_sha256": "3b9e9abc222568a72d4ad9ad3068c7bf3cf19124a9be9ef69edb22f0044de25d",
+      "current_sha256": "cc9794633639d5cbe2570bca9dc1178f007379a89f95e304d9ed64e19208ccd4",
+      "rows": 500,
+      "training_payload_sha256": "76692f62ceab128d1e6b3b43cc6b5c02e79db5005e54cd1a15e1558fd9d1c904"
+    },
+    "fraudlm_sft_train.json": {
+      "original_sha256": "4d7b29eef2740cd122dceddb75c04b2a544d82ba354593a265685128615cd6fd",
+      "current_sha256": "91e919bffddccda4288de94f697aafc93aa9999efaa67f385858c304ce152417",
+      "rows": 12000,
+      "training_payload_sha256": "4f578f2e47c6dd42c6bfc05a2137aad9759f102a4fd3ae63072e06fc32f5eced"
+    },
+    "fraudlm_sft_val.json": {
+      "original_sha256": "87526bcd9d1c07dfcee4c8ced8d23d9c761234214751c0d3b24ef52bb8fba2e9",
+      "current_sha256": "da3e32cefaeb279e95badcee6ad1bef4708a1f5fecfc09b4c3fa5dbbdf970d10",
+      "rows": 500,
+      "training_payload_sha256": "d7a4022aa464c313496e1a56417517e4cc98772fda1b8a9b8cce39c71810c035"
+    }
+  }
+}

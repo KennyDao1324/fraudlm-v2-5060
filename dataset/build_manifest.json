@@ -11,7 +11,7 @@
   "max_tokens_kept": 512,
   "ml_scores_meta": {
     "source": "frozen",
-    "source_note": "scores come from artifacts/production_model.joblib of the team repo (Base champion, logistic regression); the team has not yet confirmed this is the frozen A2-14 model (CLAUDE.md open decision 2)",
+    "source_note": "scores come from artifacts/production_model.joblib of the team repo (Base champion, logistic regression); the team has not yet confirmed this is the frozen A2-14 model (historical freeze confirmation pending)",
     "team_repo": "https://github.com/KennyDao1324/ai4cyber-fraud",
     "team_repo_commit": "d0fc662",
     "artifact_sha256": "4cb8eb3bef9861aadb4d73bd36b01e7fde4aca5e1f6bdac6092ae1bb2fb61fbc",
@@ -66,18 +66,18 @@
         "general": 50
       },
       "per_source": {
-        "llm:claude-sonnet": 365,
+        "synthetic:generated-qa-v1": 365,
         "template": 25,
         "bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 60,
         "yahma/alpaca-cleaned (CC-BY-4.0)": 50
       },
       "per_task_source": {
-        "explain_score|llm:claude-sonnet": 178,
-        "banking_qa|llm:claude-sonnet": 50,
+        "explain_score|synthetic:generated-qa-v1": 178,
+        "banking_qa|synthetic:generated-qa-v1": 50,
         "explain_score|template": 12,
         "policy|template": 5,
-        "dataset_fact|llm:claude-sonnet": 77,
-        "policy|llm:claude-sonnet": 60,
+        "dataset_fact|synthetic:generated-qa-v1": 77,
+        "policy|synthetic:generated-qa-v1": 60,
         "banking_qa|bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 60,
         "general|yahma/alpaca-cleaned (CC-BY-4.0)": 50,
         "dataset_fact|template": 8
@@ -145,19 +145,19 @@
       },
       "per_source": {
         "bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 97,
-        "llm:claude-sonnet": 308,
+        "synthetic:generated-qa-v1": 308,
         "template": 45,
         "yahma/alpaca-cleaned (CC-BY-4.0)": 50
       },
       "per_task_source": {
         "banking_qa|bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 97,
-        "dataset_fact|llm:claude-sonnet": 73,
+        "dataset_fact|synthetic:generated-qa-v1": 73,
         "policy|template": 10,
-        "explain_score|llm:claude-sonnet": 167,
-        "policy|llm:claude-sonnet": 55,
+        "explain_score|synthetic:generated-qa-v1": 167,
+        "policy|synthetic:generated-qa-v1": 55,
         "general|yahma/alpaca-cleaned (CC-BY-4.0)": 50,
         "explain_score|template": 23,
-        "banking_qa|llm:claude-sonnet": 13,
+        "banking_qa|synthetic:generated-qa-v1": 13,
         "dataset_fact|template": 12
       },
       "heldout_phrasing": 0,
@@ -222,20 +222,20 @@
         "general": 1200
       },
       "per_source": {
-        "llm:claude-sonnet": 7235,
+        "synthetic:generated-qa-v1": 7235,
         "bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 2453,
         "template": 1112,
         "yahma/alpaca-cleaned (CC-BY-4.0)": 1200
       },
       "per_task_source": {
-        "dataset_fact|llm:claude-sonnet": 1710,
-        "explain_score|llm:claude-sonnet": 3998,
-        "policy|llm:claude-sonnet": 1340,
+        "dataset_fact|synthetic:generated-qa-v1": 1710,
+        "explain_score|synthetic:generated-qa-v1": 3998,
+        "policy|synthetic:generated-qa-v1": 1340,
         "banking_qa|bitext/Bitext-retail-banking-llm-chatbot-training-dataset (CDLA-Sharing-1.0)": 2453,
         "explain_score|template": 562,
         "general|yahma/alpaca-cleaned (CC-BY-4.0)": 1200,
         "policy|template": 220,
-        "banking_qa|llm:claude-sonnet": 187,
+        "banking_qa|synthetic:generated-qa-v1": 187,
         "dataset_fact|template": 330
       },
       "heldout_phrasing": 0,
@@ -295,20 +295,20 @@
   "dropped_for_length": {},
   "files": {
     "fraudlm_sft_test.json": {
-      "bytes": 421144,
-      "sha256": "3b9e9abc222568a72d4ad9ad3068c7bf3cf19124a9be9ef69edb22f0044de25d"
+      "bytes": 424064,
+      "sha256": "cc9794633639d5cbe2570bca9dc1178f007379a89f95e304d9ed64e19208ccd4"
     },
     "fraudlm_sft_val.json": {
-      "bytes": 439410,
-      "sha256": "87526bcd9d1c07dfcee4c8ced8d23d9c761234214751c0d3b24ef52bb8fba2e9"
+      "bytes": 441874,
+      "sha256": "da3e32cefaeb279e95badcee6ad1bef4708a1f5fecfc09b4c3fa5dbbdf970d10"
     },
     "fraudlm_sft_train.json": {
-      "bytes": 10811276,
-      "sha256": "4d7b29eef2740cd122dceddb75c04b2a544d82ba354593a265685128615cd6fd"
+      "bytes": 10869156,
+      "sha256": "91e919bffddccda4288de94f697aafc93aa9999efaa67f385858c304ce152417"
     },
     "fraudlm_demo_months67.json": {
-      "bytes": 304055,
-      "sha256": "cdb93a66a15655674d0e92826d3565f0356eaffc7f05f8cda79792dd18588d03"
+      "bytes": 306215,
+      "sha256": "bd6d8949ae9558d2896e8d546093914abb98d4ce7ff4b2953a16cc3965eceeea"
     }
   },
   "demo_months67": {
