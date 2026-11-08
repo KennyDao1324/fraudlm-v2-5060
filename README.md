@@ -4,7 +4,7 @@ GPT-2 XL with rank-16 LoRA for explaining fraud-classifier outputs. The model su
 
 ## Conda setup (CPU)
 
-Use this to read the code, run the tests and chat on a CPU. No GPU is needed. Training GPT-2 XL does need one (see [RTX 5060 setup and commands](README_RTX5060.md)).
+Use this optional CPU environment to read the code, run tests and chat without a GPU. For practical GPT-2 XL fine-tuning on the RTX 5060, follow [the device setup](DEVICE_GUIDE.md) and [CUDA installation guide](README_RTX5060.md) instead; do not replace its CUDA environment with this CPU setup.
 
 ```bash
 conda env create -f environment.yml
@@ -25,13 +25,13 @@ Run these from the repository root with `fraudlm2` active. **Run 1** is the orig
 | Chat | `python chat.py --adapter checkpoint/xl_r16_v1/lora_adapter.pt` ([chat notes](README_chat_dev.md)) | `python chat_multisource.py --adapter checkpoint/xl_r16_multidata_5060_v1/lora_adapter.pt` ([chat guide](README_RTX5060.md#chat)) |
 | Evaluate | `python evaluation/run_eval.py --size gpt2-xl --adapter checkpoint/xl_r16_v1/lora_adapter.pt --split test` ([notes](evaluation/EVAL_NOTES.md)) | `python evaluation/compare_original_validation.py --device cpu` ([grounding status](FINAL_GROUNDING.md)) |
 
-To check the trainer on a CPU in a minute, without a GPU or adapter:
+For a small CPU training smoke check without an existing adapter (first use may download pretrained weights):
 
 ```bash
 python training_model/train_sft.py --size gpt2-small --max_train_rows 32 --max_steps 10 --micro_batch 2 --grad_accum 1 --eval_every 5 --run_id smoke
 ```
 
-**Run-1 demo chat.** The adapter file (about 89 MB) is not stored in Git (see [distribution status](DISTRIBUTION.md)). In the submission zip it is `checkpoint/xl_r16_v1/lora_adapter.pt`, next to the `run_config.json` that is already in this repository, so `chat.py` picks the GPT-2 XL size by itself. The demo applications come from `preprocessed/ml_scores_months6_7_demo.csv`, which is in the repository. GPT-2 XL (1.56 billion parameters, about 6 GB in fp32) downloads automatically on first run, so allow internet access and a few GB of disk. On a CPU it needs about 6-8 GB of RAM (about 3 GB with `--dtype bf16`) and each answer takes from seconds to minutes; use `--device cuda` for a live demo. Then type `list`, `explain <application id>` or `help`.
+**Run-1 demo chat.** The original adapter is not stored in Git (see [distribution status](DISTRIBUTION.md)). If you have an authorised private copy, place it at `checkpoint/xl_r16_v1/lora_adapter.pt`, next to its matching `run_config.json`; `chat.py` reads the model size from that configuration. Demo applications come from `preprocessed/ml_scores_months6_7_demo.csv`. GPT-2 XL downloads pretrained weights on first use. Its base weights alone take roughly 6 GB in fp32 or 3 GB in bf16; adapters, activations, caches and runtime add memory overhead. CPU responses can take seconds to minutes depending on hardware and token limits. Follow the device guide; CUDA is for the NVIDIA PC, not the Mac. Then type `list`, `explain <application id>` or `help`.
 
 ## Start here
 
