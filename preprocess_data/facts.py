@@ -503,9 +503,9 @@ class FactBank:
         qd = Q[intent]
         held = False
         if split == "test" and rng.random() < 0.5:
-            tpl, src, held = rng.choice(qd["held"]), "llm:claude-sonnet", True
+            tpl, src, held = rng.choice(qd["held"]), "synthetic:generated-qa-v1", True
         else:
-            pool_q = [(q, "template") for q in qd["t"]] + [(q, "llm:claude-sonnet") for q in qd["l"]] * 2
+            pool_q = [(q, "template") for q in qd["t"]] + [(q, "synthetic:generated-qa-v1") for q in qd["l"]] * 2
             tpl, src = rng.choice(pool_q)
         qfields = {**target[0].vals, **fields}
         question = tpl.format(**{k: qfields.get(k, "") for k in ("fv", "label", "m", "a", "b")})
@@ -541,9 +541,9 @@ class FactBank:
         qd = Q[intent]
         held = False
         if split == "test" and rng.random() < 0.5:
-            q, src, held = rng.choice(qd["held"]), "llm:claude-sonnet", True
+            q, src, held = rng.choice(qd["held"]), "synthetic:generated-qa-v1", True
         else:
-            pool_q = [(x, "template") for x in qd["t"]] + [(x, "llm:claude-sonnet") for x in qd["l"]] * 2
+            pool_q = [(x, "template") for x in qd["t"]] + [(x, "synthetic:generated-qa-v1") for x in qd["l"]] * 2
             q, src = rng.choice(pool_q)
         inp = "\n".join([SYSTEM_RULES, MODEL_HEADER] + [f"- {m[k].line}" for k in ctx])
         return q, inp, ans, src, held
@@ -564,9 +564,9 @@ class FactBank:
         questions_h = [f"How risky is {label} according to these facts?", f"Look up {label} for me."]
         held = False
         if split == "test" and rng.random() < 0.5:
-            q, src, held = rng.choice(questions_h), "llm:claude-sonnet", True
+            q, src, held = rng.choice(questions_h), "synthetic:generated-qa-v1", True
         else:
-            q, src = rng.choice([(x, "template") for x in questions_t] + [(x, "llm:claude-sonnet") for x in questions_l])
+            q, src = rng.choice([(x, "template") for x in questions_t] + [(x, "synthetic:generated-qa-v1") for x in questions_l])
         ans = rng.choice([
             f"The provided facts do not include {label}, so I cannot answer that from them. They cover only the other features listed.",
             f"That is not in the facts I was given: none of the lines mention {label}. I will not guess a number.",

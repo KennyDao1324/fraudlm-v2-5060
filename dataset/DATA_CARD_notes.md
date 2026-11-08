@@ -6,7 +6,7 @@
 - dataset_fact: for single-fact questions the target fact row comes from a train pool (80%) in train and from an eval pool (20%) in val and test (hash split); distractor lines and ranking questions use all rows.
 - Application pools (hash of app_id): train 84%, val 8%, test 8%; no application is shared across pools. Val / test applications whose printed context equals a train context were dropped first (val 90, test 118 applications).
 - Test ids ending in -heldout use question wordings that never occur in train or val.
-- Fields: id, instruction, input, output, task, source. source is `template`, `llm:claude-sonnet` (question wording or concept answers) or a public dataset name with licence.
+- Fields: id, instruction, input, output, task, source. source is `template`, `synthetic:generated-qa-v1` (question wording or concept answers) or a public dataset name with licence.
 - Answers of explain_score, dataset_fact and policy are template-built; every number is copied from the input.
 - Factor direction (raises / lowers the model score) is measured against a typical application, the average applicant of months 0-4; the factor lines and the answers say so.
 

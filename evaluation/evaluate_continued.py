@@ -15,6 +15,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from utils.multisource_prompt import guard_prediction_answer, load_prediction_store
+from utils.source_lineage import recorded_pair, recorded_sha256
 
 
 def sha(path):
@@ -102,13 +103,13 @@ def main():
     adapter = ROOT / args.adapter
     # Refuse to evaluate if the training data on disk differ from what this adapter was trained on.
     config = json.loads((adapter.parent / 'run_config.json').read_text())
-    assert sha(train_path)[:16] + '-' + sha(val_path)[:16] == config['data_sha256'], 'Training data differ from recorded run'
+    assert recorded_pair(train_path,val_path) == config['data_sha256'], 'Training data differ from recorded run'
     store = load_prediction_store(ROOT / 'dataset_multisource/prediction_store.jsonl')
     selected = select_rows(json.loads(test_path.read_text()), json.loads(train_path.read_text()), store, args.per_source)
     public = ROOT / 'evaluation/continued_adapter'
     private = ROOT / '.private/evaluation/continued_adapter'
     public.mkdir(parents=True, exist_ok=True); private.mkdir(parents=True, exist_ok=True)
-    selection = dict(adapter_sha256=sha(adapter), train_sha256=sha(train_path), test_sha256=sha(test_path),
+    selection = dict(adapter_sha256=sha(adapter), train_sha256=recorded_sha256(train_path), test_sha256=recorded_sha256(test_path),
         selected_ids=[r['id'] for r, _ in selected], seed=42, per_source=args.per_source,
         max_new_tokens=args.max_new_tokens, device='cpu', dtype='fp32',
         scope='Held-out instruction/case contexts from the recorded run2 data. No identical training ID/input/context. Not proof of unseen underlying entities across original mixed datasets. Old-model grounding; separate from refreshed-model context probes.')

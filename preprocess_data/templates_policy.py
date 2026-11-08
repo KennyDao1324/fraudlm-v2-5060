@@ -4,7 +4,7 @@ Policy goals (A1 OOS07, PLAN.md D6/D7): FraudLM supports a fraud analyst, never 
 blocks an application, never gives age, income or employment as a reason, says "not in the context"
 when a fact is missing, never calls an application "fraudulent", and calls the score a "model score",
 not a probability. Questions are hand-written (source "template") or generated from a recorded source
-(source "llm:claude-sonnet"); answers come from templates, with numbers copied from the context.
+(source "synthetic:generated-qa-v1"); answers come from templates, with numbers copied from the context.
 
 Author: FraudLM v2 team (COS30049.2-1).
 """
@@ -182,7 +182,7 @@ def choose_question(cat: str, rng: random.Random, split: str) -> tuple[str, str,
     def pick(kinds):
         pool = []
         for k in kinds:
-            src = "template" if k == "t" else "llm:claude-sonnet"
+            src = "template" if k == "t" else "synthetic:generated-qa-v1"
             pool += [(q, src) for q in c[k]]
         return rng.choice(pool)
 

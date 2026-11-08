@@ -18,8 +18,6 @@ preprocessed/final_predictions/
 kaggle.json
 .env
 # local tool / session files
-.claude/
-.claude-flow/
 memory.md
 # re-creatable or duplicated data:
 # clone of the team repo, see README.md (commit d0fc662)

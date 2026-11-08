@@ -11,7 +11,7 @@ Five tasks (PLAN.md Section 4)
     explain_score : context from preprocessed/ml_scores.csv (development months 0-5), answers from templates
     dataset_fact  : context lines from the EDA tables and the model card, answers from templates
     policy        : refusals (decisions, protected reasons, verdicts), "not in the context", scope
-    banking_qa    : Bitext retail-banking Q&A (CDLA-Sharing-1.0) + generated concept Q&A (source llm:claude-sonnet)
+    banking_qa    : Bitext retail-banking Q&A (CDLA-Sharing-1.0) + generated concept Q&A (source synthetic:generated-qa-v1)
     general       : Alpaca-cleaned (CC-BY-4.0)
 
 Splits: seed 42; applications and fact rows are split into disjoint pools; no (instruction, input) pair occurs
@@ -160,7 +160,7 @@ def concept_rows() -> dict[str, list[dict]]:
     """Concept Q&A by split. Template + 2 paraphrases -> train; third paraphrase -> val for 20% of entries
     (hash), train for the rest; the held-out question -> test only."""
     out = {"train": [], "val": [], "test": []}
-    src = "llm:claude-sonnet"
+    src = "synthetic:generated-qa-v1"
     for tq, paras, held_q, ans in CONCEPTS:
         key = tq
         third_to_val = int(hashlib.sha256(f"concept-{key}".encode()).hexdigest()[:4], 16) % 5 == 0
@@ -422,12 +422,12 @@ def write_notes(m: dict) -> None:
     lines = [
         "# SOURCES (facts only, for the bibliography)", "",
         "Licences were read from the dataset cards on 2026-11-06. Each row of the JSON splits carries its own `source` field "
-        "(public dataset name with licence, `template`, or `llm:claude-sonnet`), which says which licence applies to that row.", "",
+        "(public dataset name with licence, `template`, or `synthetic:generated-qa-v1`), which says which licence applies to that row.", "",
         "| Name | URL | Authors / publisher | Licence | Used for | Rows in dataset/ |", "|---|---|---|---|---|---|",
         f"| Bitext Retail Banking LLM Chatbot Training Dataset | https://huggingface.co/datasets/bitext/Bitext-retail-banking-llm-chatbot-training-dataset | Bitext Innovations International (2024) | CDLA-Sharing-1.0 | banking_qa | {src.get(P.BITEXT_SOURCE, 0)} |",
         f"| Alpaca-Cleaned | https://huggingface.co/datasets/yahma/alpaca-cleaned | cleaning project gururise/AlpacaDataCleaned (https://github.com/gururise/AlpacaDataCleaned), published on the Hugging Face hub by yahma | CC-BY-4.0 on the dataset card; upstream Stanford Alpaca is CC BY-NC 4.0 | general | {src.get(P.ALPACA_SOURCE, 0)} |",
         "| Stanford Alpaca (upstream of Alpaca-Cleaned) | https://github.com/tatsu-lab/stanford_alpaca | Taori, R., Gulrajani, I., Zhang, T., Dubois, Y., Li, X., Guestrin, C., Liang, P. and Hashimoto, T.B. (2023) | data CC BY-NC 4.0 | none directly | 0 |",
-        f"| Concept Q&A (banking and fraud-screening definitions) | written for this project, `preprocess_data/concepts.py` | project work | project work | banking_qa | {ts.get('banking_qa|llm:claude-sonnet', 0)} |",
+        f"| Concept Q&A (banking and fraud-screening definitions) | written for this project, `preprocess_data/concepts.py` | project work | project work | banking_qa | {ts.get('banking_qa|synthetic:generated-qa-v1', 0)} |",
         "| Bank Account Fraud (BAF) suite, Base | https://www.kaggle.com/datasets/sgpjesus/bank-account-fraud-dataset-neurips-2022 | Jesus, S., Pombal, J., Alves, D., Cruz, A., Saleiro, P., Ribeiro, R.P., Gama, J. and Bizarro, P. (2022), NeurIPS Datasets and Benchmarks | CC BY-NC-SA 4.0 | explain_score contexts (scored by the team LR), dataset_fact numbers (EDA tables) | see build_manifest.json |",
         "| Team classifier and model card | https://github.com/KennyDao1324/ai4cyber-fraud (commit " + str(m["ml_scores_meta"]["team_repo_commit"]) + ") | the team | team repo | model scores, threshold, model facts | n/a |",
         "| Template text (questions, answers, policy) | `preprocess_data/templates_*.py`, `facts.py` | project work | project work | explain_score, dataset_fact, policy | n/a |", "",
@@ -462,7 +462,7 @@ def write_notes(m: dict) -> None:
              "- Application pools (hash of app_id): train 84%, val 8%, test 8%; no application is shared across pools. "
              f"Val / test applications whose printed context equals a train context were dropped first (val {m['apps_removed_for_context_overlap']['val']}, test {m['apps_removed_for_context_overlap']['test']} applications).",
              "- Test ids ending in -heldout use question wordings that never occur in train or val.",
-             "- Fields: id, instruction, input, output, task, source. source is `template`, `llm:claude-sonnet` (question wording or concept answers) or a public dataset name with licence.",
+             "- Fields: id, instruction, input, output, task, source. source is `template`, `synthetic:generated-qa-v1` (question wording or concept answers) or a public dataset name with licence.",
              "- Answers of explain_score, dataset_fact and policy are template-built; every number is copied from the input.",
              "- Factor direction (raises / lowers the model score) is measured against a typical application, the average applicant of months 0-4; the factor lines and the answers say so.",
              "", "## Repeats and sampling (read before reporting test metrics)", "",

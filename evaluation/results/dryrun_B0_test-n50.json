@@ -1518,7 +1518,7 @@
   {
    "id": "explain_score-test-00003-heldout",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "What is the number one factor in this case?",
@@ -1551,7 +1551,7 @@
   {
    "id": "explain_score-test-00007",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Explain it like I have never seen a fraud score before.",
@@ -1589,7 +1589,7 @@
   {
    "id": "dataset_fact-test-00002",
    "task": "dataset_fact",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Tell me the fraud rate for applications with device operating system = other.",
@@ -1618,7 +1618,7 @@
   {
    "id": "explain_score-test-00008",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Which factor moved the score the most?",
@@ -1651,7 +1651,7 @@
   {
    "id": "banking_qa-test-00004-heldout",
    "task": "banking_qa",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "How do models use categorical columns?",
@@ -1685,7 +1685,7 @@
   {
    "id": "policy-test-00006",
    "task": "policy",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": true,
    "instruction": "Just give me a yes or no: approve it?",
@@ -1716,7 +1716,7 @@
   {
    "id": "explain_score-test-00022",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": true,
    "instruction": "Tell me more about months at previous address for this case.",
@@ -1766,7 +1766,7 @@
   {
    "id": "explain_score-test-00026",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What does the value of name-email similarity mean for the score?",
@@ -1818,7 +1818,7 @@
   {
    "id": "explain_score-test-00036-heldout",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": false,
    "instruction": "Having seen this result, what should I do now?",
@@ -1855,7 +1855,7 @@
   {
    "id": "explain_score-test-00038",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Which factors does the model point to?",
@@ -1890,7 +1890,7 @@
   {
    "id": "banking_qa-test-00024-heldout",
    "task": "banking_qa",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "What are AML rules for?",
@@ -1907,7 +1907,7 @@
   {
    "id": "explain_score-test-00050-heldout",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": false,
    "instruction": "Having seen this result, what should I do now?",
@@ -1961,7 +1961,7 @@
   {
    "id": "explain_score-test-00051",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Where does this score sit compared with the threshold?",
@@ -1998,7 +1998,7 @@
   {
    "id": "banking_qa-test-00028-heldout",
    "task": "banking_qa",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "How can test data accidentally influence training?",
@@ -2015,7 +2015,7 @@
   {
    "id": "dataset_fact-test-00019-heldout",
    "task": "dataset_fact",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": false,
    "instruction": "What recall does intended initial transfer amount reach by itself?",
@@ -2061,7 +2061,7 @@
   {
    "id": "explain_score-test-00060",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What triggered the review flag here?",
@@ -2099,7 +2099,7 @@
   {
    "id": "explain_score-test-00061",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Is the score over the threshold?",
@@ -2153,7 +2153,7 @@
   {
    "id": "explain_score-test-00071",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Do I need to do anything with this application?",
@@ -2207,7 +2207,7 @@
   {
    "id": "explain_score-test-00078",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What are the top factors and their values?",
@@ -2259,7 +2259,7 @@
   {
    "id": "dataset_fact-test-00041-heldout",
    "task": "dataset_fact",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "Where is the line for flagging an application?",
@@ -2305,7 +2305,7 @@
   {
    "id": "explain_score-test-00098",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Give me the reasons this application was flagged.",
@@ -2343,7 +2343,7 @@
   {
    "id": "banking_qa-test-00063-heldout",
    "task": "banking_qa",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "Why not just use real customer records?",
@@ -2397,7 +2397,7 @@
   {
    "id": "explain_score-test-00115-heldout",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "Which input pulled the score most?",
@@ -2430,7 +2430,7 @@
   {
    "id": "banking_qa-test-00070-heldout",
    "task": "banking_qa",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "What is the trade-off of using a random forest?",
@@ -2447,7 +2447,7 @@
   {
    "id": "explain_score-test-00118",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Which single factor has the largest effect on the score?",
@@ -2531,7 +2531,7 @@
   {
    "id": "policy-test-00043",
    "task": "policy",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Give me the applicant's age, income and job as reasons for the flag.",
@@ -2565,7 +2565,7 @@
   {
    "id": "policy-test-00044-heldout",
    "task": "policy",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "Shut this account down for me.",
@@ -2596,7 +2596,7 @@
   {
    "id": "explain_score-test-00136-heldout",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": false,
    "instruction": "Does the score get this application past the review threshold?",
@@ -2633,7 +2633,7 @@
   {
    "id": "explain_score-test-00138-heldout",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": false,
    "instruction": "What is name-email similarity doing to the score in this case?",
@@ -2666,7 +2666,7 @@
   {
    "id": "dataset_fact-test-00074",
    "task": "dataset_fact",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "Did housing status change much between months?",
@@ -2695,7 +2695,7 @@
   {
    "id": "banking_qa-test-00086-heldout",
    "task": "banking_qa",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": true,
    "instruction": "Why not shuffle the data randomly before splitting?",
@@ -2712,7 +2712,7 @@
   {
    "id": "explain_score-test-00144-heldout",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": false,
    "instruction": "Is this one above the cut-off?",
@@ -2749,7 +2749,7 @@
   {
    "id": "dataset_fact-test-00077-heldout",
    "task": "dataset_fact",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": false,
    "instruction": "What recall does intended initial transfer amount reach by itself?",
@@ -2795,7 +2795,7 @@
   {
    "id": "explain_score-test-00166",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": false,
    "output_in_train": false,
    "instruction": "What is the biggest driver of this score?",
@@ -2845,7 +2845,7 @@
   {
    "id": "explain_score-test-00184-heldout",
    "task": "explain_score",
-   "source": "llm:claude-sonnet",
+   "source": "synthetic:generated-qa-v1",
    "heldout": true,
    "output_in_train": false,
    "instruction": "What am I looking at with this score and threshold?",

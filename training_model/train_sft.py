@@ -54,6 +54,7 @@ if str(_PROJECT_ROOT) not in sys.path:
 # <<< REPO_ONLY
 
 from training_model.gpt_model import GPT_CONFIGS  # noqa: E402
+from utils.source_lineage import recorded_pair  # noqa: E402
 from training_model.lora import apply_lora, load_lora, lora_state_dict  # noqa: E402
 from training_model.sft_data import (  # noqa: E402
     IGNORE_INDEX, SFTDataset, collate, length_bucketed_batches, load_split,
@@ -498,6 +499,10 @@ def train(cfg):
         old_cfg.setdefault('deterministic', False)
         cfg['init_adapter_sha256'] = old_cfg.get('init_adapter_sha256', '')
         cfg['init_adapter'] = old_cfg.get('init_adapter', '')
+        if old_cfg.get('data_sha256') != cfg['data_sha256'] and recorded_pair(train_path,val_path) == old_cfg.get('data_sha256'):
+            cfg['actual_data_sha256'] = cfg['data_sha256']
+            cfg['data_sha256'] = old_cfg['data_sha256']
+            cfg['data_identity_note'] = 'Verified source-only metadata migration; recorded run identity retained, actual file identity recorded separately.'
         changed = {k: (old_cfg.get(k), cfg.get(k)) for k in RESUME_LOCKED if old_cfg.get(k) != cfg.get(k)}
         if changed and not cfg["force_resume"]:
             raise SystemExit(f"[resume] locked settings differ from the saved run (old, new): {changed}. "

@@ -33,6 +33,7 @@ MODULES = [  # G2 feasibility bundle
     "utils/load_gpt2_weights.py",
 ]
 TRAIN_MODULES = MODULES + [  # G4 training bundle: + the prompt template, generation and the data loader
+    "utils/source_lineage.py",
     "utils/prompt.py",
     "utils/generate.py",
     "training_model/sft_data.py",
