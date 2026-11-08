@@ -50,7 +50,7 @@ about 10-15 min.
 ## 3. What to send back to the lead
 
 - Copy **everything from the line `G2 FEASIBILITY SUMMARY` to the end of the output** and paste it into the
-  Claude Code chat. That block has the GPU name, the full results table and the `RECOMMENDED:` line.
+  project discussion. That block has the GPU name, the full results table and the `RECOMMENDED:` line.
 - If anything failed, copy the **last 40 lines** of the output instead (the error message is at the bottom).
 - Optional: in the right panel, **Output** -> `/kaggle/working/g2_feasibility_results.json` -> download, and
   put it in `llm_ver2/kaggle/results/` on your PC.

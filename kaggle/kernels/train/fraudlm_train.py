@@ -14,7 +14,6 @@ sys.argv = [sys.argv[0], "--size", "gpt2-xl", "--base_dtype", "fp32", "--grad_ck
 #
 # Author: FraudLM v2 team (COS30049.2-1). Model/LoRA/loader code follows Raschka, S. (2024)
 # *Build a Large Language Model (From Scratch)*, Manning; code repo Apache-2.0.
-# Written with help from Claude Code (Anthropic); reviewed by Thong.
 # =====================================================================================
 
 # -------------------------------------------------------------------------------------
@@ -54,7 +53,6 @@ weights (small / medium / large / xl). No `transformers` model classes are used 
 Author: FraudLM v2 team (COS30049.2-1).
 Architecture follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapters 3-4; code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import math
@@ -321,7 +319,6 @@ Hu et al. (2021) "LoRA: Low-Rank Adaptation of Large Language Models".
 Author: FraudLM v2 team (COS30049.2-1).
 Follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 appendix E (LoRALayer, LinearWithLoRA); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import math
@@ -462,7 +459,6 @@ No pretraining happens in this project (PLAN D1); these weights are the starting
 Author: FraudLM v2 team (COS30049.2-1).
 Weight mapping follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapter 5 (`load_weights_into_gpt`); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 
 Note: `transformers` is never imported here (PLAN D3). We only read the raw tensors.
 """
@@ -636,7 +632,6 @@ so the text the model sees in training is byte-identical to the text it sees at 
 Author: FraudLM v2 team (COS30049.2-1).
 Template format follows the Alpaca instruction format (Taori et al. 2023), as used in
 Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning; code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 
 Contract (PLAN.md Section 3):
     format_prompt(instruction, input="") -> str   ends with "### Response:\\n"
@@ -808,7 +803,6 @@ end-of-text token (id 50256) and cropping the context to the model's 1,024-token
 Author: FraudLM v2 team (COS30049.2-1).
 Follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapters 4-5 (`generate`, `text_to_token_ids`, `token_ids_to_text`); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import tiktoken
@@ -945,7 +939,6 @@ The prompt template is never re-written here: every example goes through
 Author: FraudLM v2 team (COS30049.2-1).
 Masked instruction fine-tuning follows Raschka, S. (2024) *Build a Large Language Model (From
 Scratch)*, Manning, chapter 7 (custom collate with -100 targets); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import json
@@ -1131,7 +1124,6 @@ Usage
 Author: FraudLM v2 team (COS30049.2-1).
 Training loop follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapters 5 and 7 and appendices D-E (warm-up, cosine decay, clipping, LoRA); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import argparse

@@ -12,7 +12,6 @@ sys.argv = [sys.argv[0], "--size", "gpt2-xl", "--no_fallback", "--ckpt", "on,off
 #
 # Author: FraudLM v2 team (COS30049.2-1). Model/LoRA/loader code follows Raschka, S. (2024)
 # *Build a Large Language Model (From Scratch)*, Manning; code repo Apache-2.0.
-# Written with help from Claude Code (Anthropic); reviewed by Thong.
 # =====================================================================================
 
 # -------------------------------------------------------------------------------------
@@ -52,7 +51,6 @@ weights (small / medium / large / xl). No `transformers` model classes are used 
 Author: FraudLM v2 team (COS30049.2-1).
 Architecture follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapters 3-4; code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import math
@@ -319,7 +317,6 @@ Hu et al. (2021) "LoRA: Low-Rank Adaptation of Large Language Models".
 Author: FraudLM v2 team (COS30049.2-1).
 Follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 appendix E (LoRALayer, LinearWithLoRA); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import math
@@ -460,7 +457,6 @@ No pretraining happens in this project (PLAN D1); these weights are the starting
 Author: FraudLM v2 team (COS30049.2-1).
 Weight mapping follows Raschka, S. (2024) *Build a Large Language Model (From Scratch)*, Manning,
 chapter 5 (`load_weights_into_gpt`); code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 
 Note: `transformers` is never imported here (PLAN D3). We only read the raw tensors.
 """
@@ -662,7 +658,6 @@ How to run
 Author: FraudLM v2 team (COS30049.2-1).
 Uses the model, LoRA and weight-loading code that follows Raschka, S. (2024) *Build a Large
 Language Model (From Scratch)*, Manning; code repo Apache-2.0.
-Written with help from Claude Code (Anthropic); reviewed by Thong.
 """
 
 import argparse
